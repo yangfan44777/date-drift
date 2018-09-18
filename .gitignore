@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Coveralls
-.converalls.yml
+coveralls
 
 # Runtime data
 pids

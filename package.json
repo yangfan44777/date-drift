@@ -4,12 +4,16 @@
   "description": "时间漂移",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha test.js",
+    "cover": "./node_modules/.bin/istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "author": "yangfan44777@163.com",
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.2",
+    "install": "^0.12.1",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0"
   }
