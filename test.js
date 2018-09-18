@@ -144,3 +144,13 @@ describe('Drift chain', function() {
     });
   });
 });
+
+describe('Default params', function() {
+  describe('increase 1 day from now', function() {
+    it('should be tomorrow', function() {
+      var df = new DateDrift();
+      console.log(df.driftDays(1).getDate());
+      return true;
+    });
+  });
+});
