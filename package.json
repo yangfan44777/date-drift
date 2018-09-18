@@ -1,0 +1,14 @@
+{
+  "name": "date-drift",
+  "version": "1.0.0",
+  "description": "时间漂移",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "yangfan44777@163.com",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
