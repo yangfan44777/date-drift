@@ -15,28 +15,36 @@ Increase or decrease a Date by year, month, date, hours, minutes, seconds and mi
 
 ## APIs
 
-### Increase/decrease years by driftYears(dYears), dYears must be an integer;
+Increase/decrease years by driftYears(dYears), dYears must be an integer;
+
     df.driftYears(dYears);
 
-### Increase/decrease months by driftMonths(dMonths), dMonths must be an integer;
+Increase/decrease months by driftMonths(dMonths), dMonths must be an integer;
+
     df.driftMonths(dMonths);
 
-### Increase/decrease days by driftDays(dDays), dDays must be an integer;
+Increase/decrease days by driftDays(dDays), dDays must be an integer;
+
     df.driftDays(dDays);
 
-### Increase/decrease hours by driftHours(dHours), dHours must be an integer;
+Increase/decrease hours by driftHours(dHours), dHours must be an integer;
+
     df.driftHours(dHours);
 
-### Increase/decrease minutes by driftMinutes(dMinutes), dMinutes must be an integer;
+Increase/decrease minutes by driftMinutes(dMinutes), dMinutes must be an integer;
+
     df.driftMinutes(dMinutes);
 
-### Increase/decrease seconds by driftSeconds(dSeconds), dSeconds must be an integer;
+Increase/decrease seconds by driftSeconds(dSeconds), dSeconds must be an integer;
+
     df.driftSeconds(dSeconds);
 
-### Increase/decrease milliseconds by driftMilliseconds(dMilliseconds), dMilliseconds must be an integer;
+Increase/decrease milliseconds by driftMilliseconds(dMilliseconds), dMilliseconds must be an integer;
+
     df.driftMilliseconds(dMilliseconds);
 
-### Get javascript Date instance
+Get javascript Date instance
+
     df.getDate();
 
 ## Test
