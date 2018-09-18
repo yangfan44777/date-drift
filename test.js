@@ -1,6 +1,7 @@
 var DateDrift = require('./index.js');
 var assert = require('assert');
 var baseDate = new Date('2018-9-30 10:04:02');
+
 describe('DriftYears', function() {
   describe('increase 2 years from 2018-9-30 10:04:02', function() {
     it('should be 2020-9-30 10:04:02', function() {
@@ -130,6 +131,16 @@ describe('DriftMilliseconds', function() {
     it('should be 2018-9-30 10:04:01:001', function() {
       var df = new DateDrift(new Date('2018-9-30 10:04:02:000'));
       assert.equal(+df.driftMilliseconds(-999).getDate(), +new Date('2018-9-30 10:04:01:001'));
+    });
+  });
+});
+
+
+describe('Drift chain', function() {
+  describe('decrease 1 year, increase 2 months and decrease 3 days from 2018-9-30 10:04:02', function() {
+    it('should be 2017-11-27 10:04:02', function() {
+      var df = new DateDrift(new Date('2018-9-30 10:04:02'));
+      assert.equal(+df.driftYears(-1).driftMonths(2).driftDays(-3).getDate(), +new Date('2017-11-27 10:04:02'));
     });
   });
 });
