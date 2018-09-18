@@ -2,9 +2,10 @@
 
 Increase or decrease a Date by year, month, date, hours, minutes, seconds and milliseconds.
 
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-[![Coverage Status](https://coveralls.io/repos/github/yangfan44777/date-drift/badge.svg?branch=master)](https://coveralls.io/github/yangfan44777/date-drift?branch=master)
 [![Build Status](https://www.travis-ci.org/yangfan44777/date-drift.svg?branch=master)](https://www.travis-ci.org/yangfan44777/date-drift)
+[![Coverage Status](https://coveralls.io/repos/github/yangfan44777/date-drift/badge.svg?branch=master)](https://coveralls.io/github/yangfan44777/date-drift?branch=master)
+[![install size](https://packagephobia.now.sh/badge?p=date-drift@1.0.2)](https://packagephobia.now.sh/result?p=date-drift@1.0.2)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ## Install
 
