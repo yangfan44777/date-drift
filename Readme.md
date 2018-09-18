@@ -14,12 +14,12 @@ Increase or decrease a Date by year, month, date, hours, minutes, seconds and mi
 
 ```javascript
 
-    var DateDrift = require('date-drift');
-   
-    var df = new DateDrift(new Date('2018-9-30 10:02:04')); // default: new Date();
-    var newDate = df.driftYears(-1).driftMonths(2).driftDays(-3).getDate();
- 
-    console.log(newDate.toISOString()); // output: 2017-11-27T02:02:04.000Z
+var DateDrift = require('date-drift');
+
+var df = new DateDrift(new Date('2018-9-30 10:02:04')); // default: new Date();
+var newDate = df.driftYears(-1).driftMonths(2).driftDays(-3).getDate();
+
+console.log(newDate.toISOString()); // output: 2017-11-27T02:02:04.000Z
 ```
 
 ## APIs
@@ -27,49 +27,49 @@ Increase or decrease a Date by year, month, date, hours, minutes, seconds and mi
 Increase/decrease years by driftYears(dYears), dYears must be an integer.
 
 ```javascript
-    df.driftYears(dYears);
+df.driftYears(dYears);
 ```
 
 Increase/decrease months by driftMonths(dMonths), dMonths must be an integer.
 
 ```javascript
-    df.driftMonths(dMonths);
+df.driftMonths(dMonths);
 ```
 
 Increase/decrease days by driftDays(dDays), dDays must be an integer.
 
 ```javascript
-    df.driftDays(dDays);
+df.driftDays(dDays);
 ```
 
 Increase/decrease hours by driftHours(dHours), dHours must be an integer.
 
 ```javascript
-    df.driftHours(dHours);
+df.driftHours(dHours);
 ```
 
 Increase/decrease minutes by driftMinutes(dMinutes), dMinutes must be an integer.
 
 ```javascript
-    df.driftMinutes(dMinutes);
+df.driftMinutes(dMinutes);
 ```
 
 Increase/decrease seconds by driftSeconds(dSeconds), dSeconds must be an integer.
 
 ```javascript
-    df.driftSeconds(dSeconds);
+df.driftSeconds(dSeconds);
 ```
 
 Increase/decrease milliseconds by driftMilliseconds(dMilliseconds), dMilliseconds must be an integer.
 
 ```javascript
-    df.driftMilliseconds(dMilliseconds);
+df.driftMilliseconds(dMilliseconds);
 ```
 
 Get javascript Date instance.
 
 ```javascript
-    df.getDate(); // return a Date instance.
+df.getDate(); // return a Date instance.
 ```
 
 ## Test
