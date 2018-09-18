@@ -4,7 +4,7 @@
   "keywords": [
     "date"
   ],
-  "description": "时间漂移",
+  "description": "Increase or decrease a Date by year, month, date, hours, minutes, seconds and milliseconds.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test.js",
