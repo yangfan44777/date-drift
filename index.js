@@ -22,8 +22,8 @@ function DateDrift(date) {
 DateDrift.prototype = {
     driftYears: function (dYears) {
         var _year = this.year + dYears;
-        var _date = Math.min(this._getMaxDateOfMonth(_year, this.month + 1), this.date);
-        return new DateDrift(new Date(_year + '-' + (this.month + 1) + '-' + _date + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
+        var _date = Math.min(this._getMaxDateOfMonth(_year, this.month), this.date);
+        return new DateDrift(new Date(_year, this.month, _date, this.hours, this.minutes, this.seconds, this.milliseconds));
     },
 
     driftMonths: function (dMonths) {
@@ -32,9 +32,8 @@ DateDrift.prototype = {
         if (monthInYear < 0) {
             monthInYear += 12;
         }
-        monthInYear++;
         var daysInMonth = Math.min(this._getMaxDateOfMonth(this.year + dYears, monthInYear), this.date);
-        return new DateDrift(new Date((this.year + dYears)+ '-' + monthInYear + '-' + daysInMonth + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
+        return new DateDrift(new Date(this.year + dYears, monthInYear, daysInMonth, this.hours, this.minutes, this.seconds, this.milliseconds));
     },
 
     driftDays: function (dDays) {
@@ -59,7 +58,7 @@ DateDrift.prototype = {
     },
 
     _getMaxDateOfMonth: function (year, month) {
-        return new Date(year, month, 0).getDate();
+        return new Date(year, month + 1, 0).getDate();
     },
 
     getDate: function () {
