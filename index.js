@@ -1,5 +1,5 @@
 /**
- * @file date-drift 通过增加或减少日、月、年来计算漂移后的日期
+ * @file date-drift. Increase or decrease a Date by year, month, date, hours, minutes, seconds and milliseconds.
  * @author yangfan44777@163.com
  */
 

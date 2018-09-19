@@ -1,6 +1,6 @@
 {
   "name": "date-drift",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "date"
   ],
@@ -13,6 +13,10 @@
   },
   "author": "yangfan44777@163.com",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/yangfan44777/date-drift.git"
+  },
   "devDependencies": {
     "coveralls": "^3.0.2",
     "install": "^0.12.1",

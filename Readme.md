@@ -18,6 +18,8 @@ Increase or decrease a Date by year, month, date, hours, minutes, seconds and mi
 var DateDrift = require('date-drift');
 
 var df = new DateDrift(new Date('2018-9-30 10:02:04')); // default: new Date();
+
+// support chained calls
 var newDate = df.driftYears(-1).driftMonths(2).driftDays(-3).getDate();
 
 console.log(newDate.toISOString()); // output: 2017-11-27T02:02:04.000Z
