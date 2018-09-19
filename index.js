@@ -21,19 +21,19 @@ function DateDrift(date) {
 
 DateDrift.prototype = {
     driftYears: function (dYears) {
-        const _year = this.year + dYears;
-        const _date = Math.min(this._getMaxDateOfMonth(_year, this.month + 1), this.date);
+        var _year = this.year + dYears;
+        var _date = Math.min(this._getMaxDateOfMonth(_year, this.month + 1), this.date);
         return new DateDrift(new Date(_year + '-' + (this.month + 1) + '-' + _date + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
     },
 
     driftMonths: function (dMonths) {
-        const dYears = Math.floor((this.month + dMonths) / 12);
-        let monthInYear = (this.month + dMonths) % 12;
+        var dYears = Math.floor((this.month + dMonths) / 12);
+        var monthInYear = (this.month + dMonths) % 12;
         if (monthInYear < 0) {
             monthInYear += 12;
         }
         monthInYear++;
-        const daysInMonth = Math.min(this._getMaxDateOfMonth(this.year + dYears, monthInYear), this.date);
+        var daysInMonth = Math.min(this._getMaxDateOfMonth(this.year + dYears, monthInYear), this.date);
         return new DateDrift(new Date((this.year + dYears)+ '-' + monthInYear + '-' + daysInMonth + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
     },
 
@@ -54,7 +54,7 @@ DateDrift.prototype = {
     },
 
     driftMilliseconds: function (dMilliseconds) {
-        const fromDate = +this._d;
+        var fromDate = +this._d;
         return new DateDrift(new Date(fromDate + dMilliseconds));
     },
 
