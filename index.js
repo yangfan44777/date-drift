@@ -58,7 +58,7 @@ DateDrift.prototype = {
         return new DateDrift(new Date(fromDate + dMilliseconds));
     },
 
-    _getMaxDateOfMonth(year, month) {
+    _getMaxDateOfMonth: function (year, month) {
         return new Date(year, month, 0).getDate();
     },
 
