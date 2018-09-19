@@ -23,7 +23,7 @@ DateDrift.prototype = {
     driftYears: function (dYears) {
         const _year = this.year + dYears;
         const _date = Math.min(this._getMaxDateOfMonth(_year, this.month + 1), this.date);
-        return new DateDrift(new Date(`${_year}-${this.month + 1}-${_date} ${this.hours}:${this.minutes}:${this.seconds}:${this.milliseconds}`));
+        return new DateDrift(new Date(_year + '-' + (this.month + 1) + '-' + _date + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
     },
 
     driftMonths: function (dMonths) {
@@ -34,7 +34,7 @@ DateDrift.prototype = {
         }
         monthInYear++;
         const daysInMonth = Math.min(this._getMaxDateOfMonth(this.year + dYears, monthInYear), this.date);
-        return new DateDrift(new Date(`${this.year + dYears}-${monthInYear}-${daysInMonth} ${this.hours}:${this.minutes}:${this.seconds}:${this.milliseconds}`));
+        return new DateDrift(new Date((this.year + dYears)+ '-' + monthInYear + '-' + daysInMonth + ' ' + this.hours + ':' + this.minutes + ':' + this.seconds + ':' + this.milliseconds));
     },
 
     driftDays: function (dDays) {
